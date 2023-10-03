@@ -1,6 +1,6 @@
 #define LED 13
 
-void setup(){
+void setup() {
   pinMode(LED, OUTPUT);
 }
 
