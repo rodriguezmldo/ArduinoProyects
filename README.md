@@ -1,4 +1,4 @@
-# Documentación Ferretería Ibáñez
+# ARDUINO FISICA BUAP
 ![Static Badge](https://img.shields.io/badge/licence-BUAP-blue?style=for-the-badge&link=https://buap.mx/)
 ![Static Badge](https://img.shields.io/badge/release%20date-Noviembre%202023-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/status-en%20desarrollo-green?style=for-the-badge)
