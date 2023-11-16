@@ -10,8 +10,6 @@ int lcdRows = 2;
 
 // Pin del botón del joystick
 int pinButton = 2;
-// Pin del eje Y del joystick
-int pinJoystickY = A1;
 
 // Estado del botón en la última iteración
 int lastButtonState = HIGH;
@@ -24,12 +22,12 @@ int lcdBrightness = 255;
 
 // Mensajes a mostrar en la pantalla LCD
 String messages[] = {
-  "Francisco",
-  "Ztecomani Jr.",
-  "José Luis",
   "Antonio",
+  "Francisco",
+  "Zontecomani Jr.",
+  "Wichi",
+  "Stu",
   "Emir",
-  "Stu ",
   // Agrega más mensajes según sea necesario
 };
 
@@ -45,6 +43,11 @@ void setup() {
 
   // Configura el pin del botón como entrada con resistencia pull-up
   pinMode(pinButton, INPUT_PULLUP);
+
+  // Muestra el primer mensaje al inicio
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Matricula: " + String(messageCount + 1));
 }
 
 void loop() {
@@ -63,19 +66,18 @@ void loop() {
     if (buttonState == LOW) {
       messageCount = (messageCount + 1) % (sizeof(messages) / sizeof(messages[0]));
       lcd.clear();
-      lcd.print(messages[messageCount]);
+      lcd.setCursor(0, 0);
+      lcd.print("Matricula: " + String(messageCount + 1));
     }
   }
 
   // Actualiza el estado del botón para la próxima iteración
   lastButtonState = buttonState;
 
-  // Lee el valor del eje Y del joystick
-  int joystickYValue = analogRead(pinJoystickY);
+  // Ajusta el brillo de la pantalla LCD al máximo
+  lcd.setBacklight(255);
 
-  // Mapea el valor del joystick Y al rango de brillo de la pantalla LCD (0 a 255)
-  lcdBrightness = map(joystickYValue, 0, 1023, 0, 255);
-
-  // Ajusta el brillo de la pantalla LCD
-  lcd.setBacklight(lcdBrightness);
+  // Muestra el mensaje actual en la segunda línea del LCD
+  lcd.setCursor(0, 1);
+  lcd.print(messages[messageCount]);
 }
