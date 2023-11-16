@@ -22,12 +22,12 @@ int lcdBrightness = 255;
 
 // Mensajes a mostrar en la pantalla LCD
 String messages[] = {
-  "Antonio",
-  "202258842",
-  "202256565",
-  "202253693",
-  "202254656",
-  "202222988",
+  "202250718", // Antonio Rodriguez
+  "202258842", // Francisco Aparicio
+  "202256565", // Jorge Vergara
+  "202253693", // Luis Santiago
+  "202254656", // Uriel Tapia
+  "202222988", // Emir Garcia
   // Agrega más mensajes según sea necesario
 };
 
