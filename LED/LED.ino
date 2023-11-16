@@ -1,6 +1,7 @@
 #include <Wire.h>
 #include "LiquidCrystal_I2C.h"
 
+<<<<<<< HEAD
 // Crear el objeto lcd  dirección  0x3F y 16 columnas x 2 filas
 LiquidCrystal_I2C lcd(0x3F, 16, 2); //
 
@@ -42,3 +43,15 @@ void loop()
     lcd.print("0: 100530248");
   }
 }
+=======
+void setup() {
+  pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED, HIGH);
+  delay(8000);
+  digitalWrite(LED, LOW);
+  delay(5000);
+}
+>>>>>>> d11c04eeeaf74afd052a15eff0689f539af19db7

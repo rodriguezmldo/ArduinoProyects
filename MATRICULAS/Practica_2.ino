@@ -26,7 +26,7 @@ int lcdBrightness = 255;
 String messages[] = {
   "Francisco",
   "Ztecomani Jr.",
-  "El wicho",
+  "José Luis",
   "Antonio",
   "Emir",
   "Stu ",
