@@ -23,7 +23,7 @@ int lcdBrightness = 255;
 // Mensajes a mostrar en la pantalla LCD
 String messages[] = {
   "Antonio",
-  "Francisco",
+  "202258842",
   "Zontecomani Jr.",
   "Wichi",
   "Stu",
